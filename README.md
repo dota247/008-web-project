@@ -1,5 +1,3 @@
-Below are my notes for this, There are certain parts that are done with the GUI.
-
 0. Create and configure EC2 instance to deploy application to
 
 
@@ -7,7 +5,7 @@ aws ec2 describe-images --owners self amazon (worry about this later)
 
 aws ec2 run-instances --image-id ami-0443305dabd4be2bc \
 --count 1 --instance-type t2.micro \
---key-name basic-key \
+--key-name xxxxxx \
 --region us-east-2 \
 --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=008-cicd-web}]'
 
@@ -32,9 +30,9 @@ aws deploy create-application --application-name 008-web-project --region us-eas
 
 4. (if using s3 for revision) bundle deployment files and send them to s3
 
-aws deploy push --application-name 007-udemy-project \
+aws deploy push --application-name 008-web-project \
 --s3-location s3://007-udemy-project/part1/dev/deploy/mywebapp.zip \
---source /home/ec2-user/jmanage/projects/007/dev/mywebapp/mywebapp/ \
+--source /home/ec2-user/jmanage/projects/008/dev/mywebapp/mywebapp/ \
 --ignore-hiden-files
 
 4. (if using github for revision)
