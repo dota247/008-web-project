@@ -1,4 +1,5 @@
-# below are my notes for this project, dont ask me why amazon selected this method to authenticate codedeploy projetcs, (its even in the official guide lol...)
+# below are my notes for this project,  you will get confused at the authenticate with github part 
+# dont ask me why amazon selected this method to authenticate codedeploy projetcs with github, (its even in the official guide lol...)
 
 
 0. Create and configure EC2 instance to deploy application to
